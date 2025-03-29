@@ -1,13 +1,15 @@
 import React from 'react'
 import './App.css'
-import Navbar from './components/Navbar'
-import HeroSection from './components/HeroSection'
+import Section1 from './components/Section1'
+import Section2 from './components/Section2'
+import Section3 from './components/Section3'
 
 function App() {
   return (
     <div className="app">
-      <Navbar />
-      <HeroSection />
+      <Section1 />
+      <Section2 />
+      <Section3 />
     </div>
   )
 }
