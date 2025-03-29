@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 import CountUp from './CountUp';
 import '../styles/Section3.css';
+import executiveImage from '../assets/executive-image.jpg';
 
 const Section3 = () => {
   const { ref, inView } = useInView({
@@ -81,10 +82,11 @@ const Section3 = () => {
             </div>
           </div>
           <div className="about-image">
-            {/* Placeholder div with styling to represent an executive image */}
-            <div className="executive-placeholder">
-              <div className="placeholder-text">Executive Image</div>
-            </div>
+            <img 
+              src={executiveImage} 
+              alt="Real Estate Executive" 
+              className="executive-img" 
+            />
           </div>
         </div>
       </div>
