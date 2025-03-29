@@ -1,23 +1,17 @@
 import React from 'react';
+import logo from '../assets/logo.png';
+import '../styles/Navbar.css';
 
 const Navbar = () => {
   return (
-    <nav className="absolute top-0 left-0 w-full flex justify-between items-center px-6 py-4 z-10">
-      <div className="flex items-center">
-        <div className="flex items-center space-x-1">
-          <div className="w-5 h-5 bg-orange-500 flex items-center justify-center rounded-sm">
-            <div className="w-3 h-3 bg-white"></div>
-          </div>
-          <span className="text-xl font-bold">
-            <span className="text-white">Bangalore </span>
-            <span className="text-orange-500">Realtors</span>
-          </span>
-        </div>
+    <nav className="navbar">
+      <div className="logo-container">
+        <img src={logo} alt="Bangalore Realtors Logo" className="logo" />
       </div>
-      <div className="hidden md:flex gap-8">
-        <a href="#about" className="text-white hover:text-orange-500 transition-colors">About</a>
-        <a href="#contact" className="text-white hover:text-orange-500 transition-colors">Contact</a>
-        <a href="#testimonials" className="text-white hover:text-orange-500 transition-colors">Testimonials</a>
+      <div className="nav-links">
+        <a href="#about" className="nav-link">About</a>
+        <a href="#contact" className="nav-link">Contact</a>
+        <a href="#testimonials" className="nav-link">Testimonials</a>
       </div>
     </nav>
   );

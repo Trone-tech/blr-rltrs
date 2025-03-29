@@ -1,12 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useInView } from 'react-intersection-observer';
 import CountUp from './CountUp';
 import '../styles/Section3.css';
-// We'll use a placeholder approach for the image
-// You'll need to add an actual executive image to your assets folder
 
 const Section3 = () => {
+  const { ref, inView } = useInView({
+    threshold: 0.3,
+    triggerOnce: true
+  });
+
   return (
-    <section className="section3">
+    <section className="section3" ref={ref}>
       <div className="stats-container">
         <div className="stat-box">
           <div className="stat-number">
@@ -17,6 +21,7 @@ const Section3 = () => {
               direction="up"
               duration={1}
               className="count-up-text"
+              startWhen={inView}
             />+
           </div>
           <div className="stat-label">years of experience</div>
@@ -30,6 +35,7 @@ const Section3 = () => {
               direction="up"
               duration={1}
               className="count-up-text"
+              startWhen={inView}
             />+
           </div>
           <div className="stat-label">successful transactions</div>
@@ -43,6 +49,7 @@ const Section3 = () => {
               direction="up"
               duration={1}
               className="count-up-text"
+              startWhen={inView}
             />+
           </div>
           <div className="stat-label">satisfied clients</div>
