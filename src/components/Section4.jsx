@@ -13,7 +13,7 @@ const Section4 = () => {
   return (
     <section className="section4" ref={ref}>
         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-      <img style={{ width: '40%', height: 'auto' }} src={section4} alt="Section 4" />
+      <img style={{ width: '70%', height: 'auto' }} src={section4} alt="Section 4" />
         </div>
     </section>
   );
