@@ -40,6 +40,9 @@ const Navbar = () => {
           <a href="#testimonials" className="nav-link" onClick={closeMenu}>
             Testimonials
           </a>
+          <a href="/contact" className="nav-link enquire-btn" onClick={closeMenu}>
+            Enquire Now
+          </a>
         </div>
 
         {/* Mobile Drop Down Menu */}
@@ -66,6 +69,11 @@ const Navbar = () => {
             <li>
               <a href="#testimonials" onClick={closeMenu}>
                 Testimonials
+              </a>
+            </li>
+            <li>
+              <a href="/contact" onClick={closeMenu}>
+                Enquire Now
               </a>
             </li>
           </ul>

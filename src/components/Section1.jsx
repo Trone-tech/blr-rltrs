@@ -75,7 +75,7 @@ const Section1 = () => {
           Buy, Sell, Rent with <span className="hero-subtitle-highlight">Bangalore Realtors!</span>
         </p>
         <div>
-          <button className="enquire-button">
+          <button className="enquire-button" onClick={() => window.location.href = '/contact'}>
             ENQUIRE NOW
           </button>
         </div>

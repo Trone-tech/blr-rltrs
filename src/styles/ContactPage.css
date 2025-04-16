@@ -1,0 +1,220 @@
+/* --- styles/ContactPage.css (Additions/Modifications) --- */
+
+/* --- General Enhancements --- */
+.contact-page {
+  padding-top: 80px; /* Add padding to prevent content from hiding behind sticky navbar */
+  /* Add other base styles if needed */
+}
+
+.contact-container {
+  max-width: 1200px; /* Adjust max-width as needed */
+  margin: 40px auto; /* Center the container and add vertical spacing */
+  padding: 20px;
+  /* background-color: #f9f9f9; Optional: subtle background for the container */
+  /* border-radius: 8px; */
+  /* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); */
+}
+
+.contact-container h2 {
+  text-align: center;
+  margin-bottom: 40px; /* More space below heading */
+  font-size: 2.5rem; /* Larger heading */
+  color: #333;
+}
+
+.contact-content {
+  display: flex; /* Arrange form and info cards side-by-side */
+  gap: 40px; /* Space between form and info cards */
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+/* --- Form Enhancements --- */
+.contact-form {
+  flex: 1; /* Allow form to take available space */
+  min-width: 300px; /* Minimum width before wrapping */
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Space between form elements */
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  width: 100%;
+  padding: 15px; /* Comfortable padding */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for focus */
+}
+
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form textarea:focus {
+  outline: none; /* Remove default outline */
+  border-color: orangered; /* Highlight border on focus */
+  box-shadow: 0 0 0 3px rgba(255, 69, 0, 0.2); /* Add a subtle glow effect */
+}
+
+.contact-form textarea {
+  resize: vertical; /* Allow vertical resizing only */
+  min-height: 120px; /* Minimum height for textarea */
+}
+
+/* --- Submit Button Enhancements --- */
+.contact-btn {
+  padding: 15px 30px;
+  background-color: orangered; /* Main brand color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+  display: flex; /* Align spinner and text */
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* Space between spinner and text */
+}
+
+.contact-btn:hover:not(:disabled) {
+  background-color: #e64a19; /* Darker shade on hover */
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+.contact-btn:active:not(:disabled) {
+  transform: translateY(0); /* Push back down on click */
+}
+
+.contact-btn:disabled {
+  background-color: #ffccbc; /* Lighter color when disabled */
+  cursor: not-allowed; /* Indicate non-interactive state */
+  opacity: 0.7;
+}
+
+/* Spinner Animation */
+.spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* --- Submission Feedback Styling --- */
+.submission-feedback {
+  margin-top: 10px; /* Space above the feedback */
+  min-height: 2em; /* Reserve space to prevent layout shifts */
+}
+
+.submission-feedback p {
+  padding: 15px;
+  border-radius: 5px;
+  font-size: 0.95rem;
+  text-align: center;
+  margin: 0; /* Reset default margin */
+}
+
+.submission-feedback .success {
+  background-color: #dff0d8; /* Light green background */
+  color: #3c763d; /* Dark green text */
+  border: 1px solid #d6e9c6;
+}
+
+.submission-feedback .error {
+  background-color: #f2dede; /* Light red background */
+  color: #a94442; /* Dark red text */
+  border: 1px solid #ebccd1;
+}
+
+/* --- Info Cards Enhancements --- */
+.contact-info-cards {
+  flex: 1; /* Allow info cards section to take available space */
+  min-width: 300px; /* Minimum width before wrapping */
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Space between cards */
+}
+
+.info-card {
+  display: flex;
+  align-items: center; /* Vertically align icon and text */
+  gap: 20px; /* Space between icon and text block */
+  background-color: #fff; /* Optional: card background */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); /* Subtle shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-card:hover {
+   transform: translateY(-5px); /* Lift card on hover */
+   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12); /* Increase shadow */
+}
+
+.info-icon {
+  font-size: 2rem; /* Larger icons */
+  color: orangered; /* Icon color */
+  flex-shrink: 0; /* Prevent icon from shrinking */
+  transition: transform 0.3s ease; /* Transition for hover effect */
+}
+
+.info-card:hover .info-icon {
+  transform: scale(1.15); /* Scale up icon on card hover */
+}
+
+.info-title {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.info-detail {
+  color: #555;
+  line-height: 1.5;
+}
+
+/* --- Responsiveness --- */
+@media (max-width: 768px) {
+  .contact-content {
+      flex-direction: column; /* Stack form and info cards vertically */
+      gap: 40px; /* Maintain gap when stacked */
+  }
+
+  .contact-container h2 {
+      font-size: 2rem; /* Adjust heading size */
+  }
+
+  .contact-form,
+  .contact-info-cards {
+      min-width: 100%; /* Take full width when stacked */
+  }
+}
+
+/* --- Back to Top Button Styles (ensure these are defined, maybe in Section1.css or here) --- */
+.back-to-top-button {
+position: fixed;
+bottom: 30px;
+right: 30px;
+background-color: orangered;
+color: white;
+border: none;
+border-radius: 50%;
+width: 50px;
+height: 50px;
+font-size: 20px;
+display: flex;
+align-items: center;
+justify-content: center;
+cursor: pointer;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+transition: background-color 0.3s, transform 0.3s;
+z-index: 1000; /* Ensure it's above other content */
+}
+
+.back-to-top-button:hover {
+background-color: #e64a19; /* Darker shade */
+transform: scale(1.1);
+}
