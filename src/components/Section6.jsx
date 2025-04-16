@@ -26,8 +26,8 @@ const Section6 = () => {
         
         <div className="footer-contact">
           <h3>Contact</h3>
-          <p><a href="mailto:trone@tronechtechnologies.in">trone@tronechtechnologies.in</a></p>
-          <p><a href="tel:+919513758888">+91 95137 58888</a></p>
+          <p><a href="mailto:example@gmail.com">example@gmail.com</a></p>
+          <p><a href="tel:+919606901007">+919606901007</a></p>
         </div>
       </div>
       

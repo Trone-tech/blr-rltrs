@@ -1,6 +1,6 @@
 import React from 'react'
 import './App.css'
-import Navbar from './components/Navbar'
+// import Navbar from './components/Navbar'
 import Section1 from './components/Section1'
 import Section2 from './components/Section2'
 import Section3 from './components/Section3'
@@ -12,7 +12,14 @@ import WhatsAppButton from './components/WhatsAppButton'
 function App() {
   return (
     <div className="app">
-      <Navbar />
+      {/* <Navbar /> */}
+      <style jsx global>
+        {`
+          * {
+            font-family: 'Poppins', sans-serif;
+          }
+        `}
+      </style>
       <Section1 />
       <Section2 />
       <Section3 />

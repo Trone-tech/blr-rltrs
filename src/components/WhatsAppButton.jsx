@@ -4,7 +4,7 @@ import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import '../styles/WhatsAppButton.css';
 
 const WhatsAppButton = () => {
-  const phoneNumber = "919513758888";
+  const phoneNumber = "919606901007";
   
   return (
     <a 
