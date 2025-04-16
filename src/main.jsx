@@ -8,4 +8,4 @@ createRoot(document.getElementById('root')).render(
     <App />
   </StrictMode>,
 )
-document.title = "Bangalore realtors"
+document.title = "Bangalore Realtors"
